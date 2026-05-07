@@ -286,9 +286,6 @@ Possible future enhancements:
 **Motawea Nagi**  
 Business Intelligence Analyst | Data Analytics | Machine Learning | Power BI
 
-GitHub: *(Add your GitHub profile link)*  
-LinkedIn: *(Add your LinkedIn profile link)*
-
 ---
 
 ⭐ If you found this project useful, feel free to star this repository.
