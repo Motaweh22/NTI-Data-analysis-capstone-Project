@@ -266,26 +266,6 @@ Sales-Report-PowerBI/
 │── Capstone.pbix
 │── Supermarket_Sales.csv
 ```
-
----
-
-## 🔮 Future Improvements
-
-Possible future enhancements:
-
-- Sales forecasting using machine learning
-- Customer segmentation clustering
-- Profit margin analysis
-- Inventory optimization dashboard
-- Real-time data integration
-
----
-
-## 👤 Author
-
-**Motawea Nagi**  
-Business Intelligence Analyst | Data Analytics | Machine Learning | Power BI
-
 ---
 
 ⭐ If you found this project useful, feel free to star this repository.
