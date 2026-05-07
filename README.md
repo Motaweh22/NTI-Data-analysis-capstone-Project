@@ -341,19 +341,6 @@ supermarket-sales-analysis/
 │── Cleaned_Supermarket_Sales.csv
 │── DataCleaningV4.ipynb
 ```
-
----
-
-## 🔮 Future Improvements
-
-Possible future enhancements:
-
-- Sales forecasting using machine learning
-- Customer segmentation using clustering
-- Profit margin analysis
-- Inventory optimization
-- Real-time dashboard integration
-
 ---
 
 ⭐ If you found this project useful, feel free to star this repository.
