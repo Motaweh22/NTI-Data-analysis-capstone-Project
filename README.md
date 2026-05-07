@@ -1,10 +1,10 @@
-# 📊 Sales Report Dashboard – Power BI Project
+# 📊 Sales Report Dashboard – End-to-End Data Analytics Project
 
 ## 📌 Project Overview
 
-This project presents an interactive **Sales Analytics Dashboard** built using **Microsoft Power BI** to analyze supermarket sales performance across multiple branches.
+This project presents an interactive **Sales Analytics Dashboard** built using **Python** and **Microsoft Power BI** to analyze supermarket sales performance across multiple branches.
 
-The dashboard transforms raw transactional data into actionable business insights through **data cleaning, transformation, modeling, DAX calculations, and interactive visual analytics**.
+The project follows a complete **end-to-end data analytics workflow**, starting from raw data cleaning and preprocessing in Python, followed by data modeling, KPI creation, and interactive dashboard development in Power BI.
 
 The project focuses on:
 
@@ -33,12 +33,19 @@ The main objectives of this project are:
 
 ## 🛠 Tools & Technologies
 
+### Data Processing
+
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
+
+### Business Intelligence
+
 - Microsoft Power BI
 - Power Query
 - DAX (Data Analysis Expressions)
 - Data Modeling
-- Excel / CSV
-- Business Intelligence
 
 ---
 
@@ -74,44 +81,49 @@ This project uses the **Supermarket Sales Dataset** containing transactional sal
 
 ---
 
-## 🧹 Data Cleaning & Transformation
+## 🧹 Data Cleaning & Preprocessing
 
-Data preprocessing and transformation were performed using **Power Query** and **DAX**.
+Data cleaning and preprocessing were performed using **Python** before importing the dataset into Power BI.
 
-### Data Cleaning
+### Technologies Used
 
-- Checked for duplicate invoice records
-- Handled missing values
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
+
+### Cleaning Steps
+
+- Loaded raw supermarket sales data
+- Checked for missing values
+- Removed duplicate records
+- Fixed inconsistent formatting
 - Validated numeric columns
-- Corrected inconsistent formatting
-- Standardized categorical values
-- Verified transaction integrity
+- Corrected invalid values
+- Standardized categorical features
+- Created date-related features
+- Exported cleaned dataset for Power BI analysis
 
-### Feature Engineering
+### Output Files
 
-Additional calculated measures were created for:
-
-- Total Sales
-- Sales Without Tax
-- Customer Count
-- Average Rating
-- Top Branch
-- Top Product Line
-- Monthly Sales Trends
+- Raw Dataset → `Supermarket_Sales.csv`
+- Cleaned Dataset → `Cleaned_Supermarket_Sales.csv`
+- Cleaning Notebook → `DataCleaningV4.ipynb`
 
 ---
 
 ## 🗂 Data Modeling
 
-A relational data model was created inside Power BI to optimize performance and enable accurate business analysis.
+A semantic model was built in Power BI to support analytical reporting and KPI calculations.
 
 ### Modeling Tasks
 
-- Defined relationships between tables
 - Optimized column data types
+- Built date hierarchy
 - Created calculated columns
-- Built reusable DAX measures
-- Designed date hierarchy
+- Created reusable DAX measures
+- Structured dimensions for branch, product, customer, and time analysis
+
 ---
 
 ## 📌 Key Performance Indicators (KPIs)
@@ -122,26 +134,26 @@ The dashboard tracks the following business KPIs:
 
 - **Total Sales:** Overall revenue generated across all branches.
 - **Sales Without Tax:** Net sales excluding tax.
-- **Average Transaction Value:** Average revenue per transaction.
-- **Monthly Sales Growth:** Month-over-month sales performance.
+- **Average Transaction Value**
+- **Monthly Sales Growth**
 
 ### Customer KPIs
 
-- **Customer Count:** Total unique customer transactions.
-- **Member vs Normal Customers:** Customer segmentation analysis.
-- **Gender Distribution:** Purchase behavior by gender.
+- **Customer Count**
+- **Member vs Normal Customers**
+- **Gender Distribution**
 
 ### Product KPIs
 
-- **Top Product Line:** Highest revenue-generating product category.
-- **Total Quantity Sold:** Number of products sold.
-- **Product Contribution %:** Share of each product line in total sales.
+- **Top Product Line**
+- **Total Quantity Sold**
+- **Product Contribution %**
 
 ### Branch KPIs
 
-- **Top Performing Branch:** Branch with highest revenue.
-- **Branch Contribution %:** Revenue contribution by branch.
-- **Average Branch Rating:** Customer satisfaction by branch.
+- **Top Performing Branch**
+- **Branch Contribution %**
+- **Average Branch Rating**
 
 ### Operational KPIs
 
@@ -254,11 +266,26 @@ This dashboard helps stakeholders:
 ## 📁 Repository Structure
 
 ```bash
-Sales-Report-PowerBI/
+supermarket-sales-analysis/
 │── README.md
 │── Capstone.pbix
 │── Supermarket_Sales.csv
+│── Cleaned_Supermarket_Sales.csv
+│── DataCleaningV4.ipynb
 ```
+
+---
+
+## 🔮 Future Improvements
+
+Possible future enhancements:
+
+- Sales forecasting using machine learning
+- Customer segmentation using clustering
+- Profit margin analysis
+- Inventory optimization
+- Real-time dashboard integration
+
 ---
 
 ⭐ If you found this project useful, feel free to star this repository.
