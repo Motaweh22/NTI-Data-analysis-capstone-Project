@@ -112,13 +112,6 @@ A relational data model was created inside Power BI to optimize performance and 
 - Created calculated columns
 - Built reusable DAX measures
 - Designed date hierarchy
-
-> Add your Power BI model screenshot here.
-
-```html
-<img src="YOUR_MODEL_SCREENSHOT_LINK" />
-```
-
 ---
 
 ## 📌 Key Performance Indicators (KPIs)
