@@ -2,9 +2,11 @@
 
 ## 📌 Project Overview
 
-This project presents an interactive **Sales Analytics Dashboard** built using **Python** and **Microsoft Power BI** to analyze supermarket sales performance across multiple branches.
+This project presents an end-to-end **Data Analytics and Business Intelligence solution** built using **Python** and **Microsoft Power BI** to analyze supermarket transactional data across multiple branches.
 
-The project follows a complete **end-to-end data analytics workflow**, starting from raw data cleaning and preprocessing in Python, followed by data modeling, KPI creation, and interactive dashboard development in Power BI.
+The project starts with raw data cleaning and preprocessing in Python, followed by KPI development, business analysis, and interactive dashboard creation in Power BI.
+
+The main goal was to transform raw transactional data into actionable business insights through data quality improvement, feature engineering, KPI analysis, and dashboard reporting.
 
 The project focuses on:
 
@@ -14,6 +16,7 @@ The project focuses on:
 - Customer behavior analysis
 - Payment method trends
 - Business decision support
+- Promotion effectiveness analysis
 
 ---
 
@@ -22,6 +25,7 @@ The project focuses on:
 The main objectives of this project are:
 
 - Monitor overall sales performance.
+- Evaluate promotion effectiveness.
 - Identify top-performing branches.
 - Analyze product profitability.
 - Understand customer purchasing behavior.
@@ -83,32 +87,95 @@ This project uses the **Supermarket Sales Dataset** containing transactional sal
 
 ## 🧹 Data Cleaning & Preprocessing
 
-Data cleaning and preprocessing were performed using **Python** before importing the dataset into Power BI.
+Data cleaning and preprocessing were performed using **Python**, **Pandas**, and **NumPy** before importing the dataset into Power BI.
 
-### Technologies Used
+The objective was to improve data quality, resolve inconsistencies, enrich the dataset, and prepare it for KPI analysis and dashboard reporting.
 
-- Python
-- Pandas
-- NumPy
-- Jupyter Notebook
+### Data Quality Issues Resolved
 
-### Cleaning Steps
+#### NULL Values
 
-- Loaded raw supermarket sales data
-- Checked for missing values
-- Removed duplicate records
-- Fixed inconsistent formatting
-- Validated numeric columns
-- Corrected invalid values
-- Standardized categorical features
-- Created date-related features
-- Exported cleaned dataset for Power BI analysis
+- **Tax 5%:** 9 missing rows were filled using:
 
-### Output Files
+```python
+Tax = Total - (Unit Price × Quantity)
+```
 
-- Raw Dataset → `Supermarket_Sales.csv`
-- Cleaned Dataset → `Cleaned_Supermarket_Sales.csv`
-- Cleaning Notebook → `DataCleaningV4.ipynb`
+- **Total:** 3 missing rows were calculated using:
+
+```python
+Total = (Unit Price × Quantity) + Tax
+```
+
+#### Currency Symbols
+
+- Removed `'USD'` from **5 records** in `UnitPrice`
+- Converted the column from string to numeric format
+
+#### Customer Type
+
+- Standardized **27 invalid entries** by replacing them with:
+
+`Normal`
+
+#### Time Formatting
+
+- Standardized time values into:
+
+`HH:MM:SS AM/PM`
+
+Example:
+
+`08:30 PM → 08:30:00 PM`
+
+#### Data Types
+
+- Converted `UnitPrice` from **object → float**
+
+#### Duplicate Records
+
+- Removed **6 duplicate rows**
+
+#### Outlier Handling
+
+##### Quantity
+
+- Corrected negative quantities:
+
+`-8, -7, -1 → 8, 7, 1`
+
+##### Rating
+
+- Fixed abnormal rating:
+
+`97 → 9.7`
+
+##### Tax & Total
+
+- Reviewed high-value outliers
+- Confirmed they were valid business transactions and retained them
+
+---
+
+## 🆕 Feature Engineering
+
+Additional business features were created to support deeper analysis.
+
+### New Features
+
+#### branch_city
+
+A derived feature mapping each branch to its corresponding city:
+
+- A → Yangon
+- B → Mandalay
+- C → Naypyitaw
+
+This enabled:
+
+- Geographic sales analysis
+- Branch comparison
+- Regional customer behavior analysis
 
 ---
 
@@ -132,8 +199,8 @@ The dashboard tracks the following business KPIs:
 
 ### Sales KPIs
 
-- **Total Sales:** Overall revenue generated across all branches.
-- **Sales Without Tax:** Net sales excluding tax.
+- **Total Sales**
+- **Sales Without Tax**
 - **Average Transaction Value**
 - **Monthly Sales Growth**
 
@@ -160,6 +227,7 @@ The dashboard tracks the following business KPIs:
 - **Average Customer Rating**
 - **Payment Method Distribution**
 - **Peak Sales Period**
+- **Promotion Effectiveness**
 
 ---
 
